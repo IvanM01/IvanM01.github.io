@@ -1,0 +1,29 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine</title>
+    <link rel="stylesheet" href="css/valentine.css">
+  <style type="text/css" id="operaUserStyle"></style></head>
+  <body>
+    <div id="valentineQuestion"><b>Will you be my Valentine?</b></div>
+    <button class="answerButton" onclick="location.href='thankyou.html'" style="font-size: 93px;">Siiii</button>
+    <button class="answerButton" id="noButton">Noo y no :)</button>
+    <br>
+    <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNms2OTQ3MXBxZXBkOHdjYW11aDJ2YTV6ZHhseW5xOWxlaHI5ZXh3NSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xT0GqFhyNd0Wmfo6sM/giphy.gif" alt="cat asking question" class="responsive">
+
+    <script>
+      document
+        .getElementById("noButton")
+        .addEventListener("click", function () {
+          var yesButton = document.querySelector(
+            'button[onclick*="thankyou.html"]'
+          );
+          var currentFontSize = parseInt(
+            window.getComputedStyle(yesButton).fontSize
+          );
+          yesButton.style.fontSize = currentFontSize + 10 + "px"; // Increase font size by 5px
+        });
+    </script>
+  
+
+</body></html>
